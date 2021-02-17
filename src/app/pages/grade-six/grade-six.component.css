@@ -75,13 +75,11 @@ src: url(../../../assets/FM-Rajantha.TTF);
 
 
 .card1 {
-margin-top: 100px;
- background-color: tomato;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 9vh;
+
   transition: 0.3s;
-  width: 400px;
-  text-align: center;
-  color: white;
+  width: 250px;
+
 
 }
 .card1:hover {
@@ -262,13 +260,11 @@ body{
 }
 
 .card1 {
-margin-top: 100px;
-background-color: tomato;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-transition: 0.3s;
-width: 400px;
-text-align: center;
-color: white;
+  margin-top: 9vh;
+
+  transition: 0.3s;
+  width: 250px;
+;
 
 }
 .card1:hover {
@@ -343,7 +339,7 @@ margin-top: 70px;
 background-color: rgba(39, 39, 39, 0.8);
 border-radius: 2%;
 width: 990px;
-left: -10px;
+left: 2px;
 /* margin-bottom: -100px; */
 /* position: absolute; */
 }
@@ -481,13 +477,11 @@ padding-left: 10px;
     font-size: 30px;
   }
 .card1 {
-margin-top: 100px;
- background-color: tomato;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 9vh;
+
   transition: 0.3s;
-  width: 400px;
-  text-align: center;
-  color: white;
+  width: 250px;
+
 
 }
 .card1:hover {
@@ -601,12 +595,12 @@ left: -35px;
 }  */
 .prev1{
   margin-top: -20px;
-left: -35px;
+left: -135px;
 color: white;
 }
 .next1{
   margin-top: -20px;
-  margin-left: 230px;
+  margin-left: 320px;
   color: white;
 }
 .pre{
@@ -672,7 +666,7 @@ width: 8%;
 
   }
   .main{
-    margin-top: 10%;
+    margin: 8vh auto auto;
   }
   .fig{
     /* width: 000%; */
@@ -689,13 +683,11 @@ width: 8%;
     font-size: 30px;
   }
 .card1 {
-margin-top: 100px;
- background-color: tomato;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 9vh;
+
   transition: 0.3s;
-  width: 400px;
-  text-align: center;
-  color: white;
+  width: 250px;
+
 
 }
 .card1:hover {
@@ -809,12 +801,12 @@ left: -35px;
 }  */
 .prev1{
   margin-top: -20px;
-left: -35px;
+left: -135px;
 color: white;
 }
 .next1{
   margin-top: -20px;
-  margin-left: 230px;
+  margin-left: 315px;
   color: white;
 }
 .pre{
@@ -896,13 +888,11 @@ color: white;
     font-size: 30px;
   }
 .card1 {
-margin-top: 100px;
- background-color: tomato;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 9vh;
+
   transition: 0.3s;
-  width: 400px;
-  text-align: center;
-  color: white;
+  width: 250px;
+
 
 }
 .card1:hover {
@@ -1058,14 +1048,11 @@ color: white;
   font-size: 20px;
 }
 .card1 {
-  margin-top: 10px;
-  background-color: tomato;
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-   transition: 0.3s;
-   width: 300px;
-   text-align: center;
-   color: white;
-   font-size: 10px;
+  margin-top: 9vh;
+
+  transition: 0.3s;
+  width: 250px;
+
 
 }
 .card1:hover {
@@ -1150,7 +1137,7 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 figure{
 display: flex ;
-margin: 20px 20px 20px;
+margin: 20px 50px 20px 0px;
 /* padding: .7em; */
 /* left: 200px; */
 
@@ -1182,7 +1169,7 @@ width: 50px;
 }
 
 .fig2{
-  margin-left: 450px;
+  /* margin-left: 450px; */
   text-align: center;
 
 

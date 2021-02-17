@@ -10,24 +10,24 @@ export class StatictisComponent implements OnInit {
         Value: number;
         Label: string;
     }[];
-    corect: any;
-    question: any;
-    answeICorrect: number;
-    ans: any;
+    corect: any = 0;
+    question: any = 0 ;
+    answeICorrect: number ;
+    ans: any ;
     totalCorrect: any;
-    incorrect: number;
+    incorrect: any =0;
     userPic = '../../../assets/userr1.png';
-    myRank: any;
+    myRank: any  =0;
     leader: any;
     name: any;
     datas: any;
     id: any;
     getvalue: any;
-    coin: any;
-    score: any;
+    coin: any =0;
+    score: any  =0;
   userID: string;
   anser: number;
-  corecct: number;
+  corecct: any = 0;
 
     constructor(
         private service: ServiceService,
@@ -48,14 +48,39 @@ export class StatictisComponent implements OnInit {
             });
 
         if (this.datas[2] === 'al') {
+          if (this.userID === undefined){
+            this.defaul();
+          }
+          else{
             this.getStatic();
+          }
+
         }
         if (this.datas[3] === 'six') {
+          if (this.userID === undefined){
+            this.defaul();
+          }
+          else {
             this.getStaticSix();
+          }
         }
         if (this.datas[3] === 'ol') {
+          if (this.userID === undefined){
+            this.defaul();
+          }
+          else {
             this.getStaticOL();
+          }
+
         }
+
+    }
+    defaul(): void{
+
+        this.myRank = 0;
+        this.coin = 0;
+        this.score = 0;
+
 
     }
 

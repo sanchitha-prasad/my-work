@@ -35,14 +35,29 @@ export class AlevelComponent implements OnInit {
     ) {}
     loadComponents = NavBarComponent;
     ngOnInit(): void {
-        this
+
+      const sub = new FormData();
+      sub.append('access_key', '6808');
+      sub.append('get_subcategory_by_maincategory', '1');
+      sub.append('main_id', '19');
+
+      this
+          .Serviceservice
+          .getSubcategory(sub)
+          .subscribe((event => {
+              this.subcat = event;
+              this.subcategory = this.subcat.data;
+              this.sub = 'Biology';
+
+          }), (err) => {});
+      this
             .route
             .queryParams
             .subscribe((params) => {
                 this.data = JSON.parse(params.data);
             });
-        this.userID = sessionStorage.getItem('userId');
-        this.getDataUser();
+      this.userID = sessionStorage.getItem('userId');
+      this.getDataUser();
 
 
 
@@ -51,16 +66,16 @@ export class AlevelComponent implements OnInit {
 
 
 
-		      const buttonRight = document.getElementById('slideRight');
-        const buttonLeft = document.getElementById('slideLeft');
-        const slider  = document.getElementById('slider');
-        const innerslider  = document.getElementById('slider-inner');
+		    const buttonRight = document.getElementById('slideRight');
+      const buttonLeft = document.getElementById('slideLeft');
+      const slider  = document.getElementById('slider');
+      const innerslider  = document.getElementById('slider-inner');
 
-        let pressed = false;
-        let startx;
-        let x;
+      let pressed = false;
+      let startx;
+      let x;
 
-        slider.addEventListener('mousedown', (e) => {
+      slider.addEventListener('mousedown', (e) => {
           pressed = true;
           console.log( innerslider.offsetLeft );
 
@@ -68,30 +83,30 @@ export class AlevelComponent implements OnInit {
           slider.style.cursor = 'grabbing';
         });
 
-        slider.addEventListener('mouseenter', () => {
+      slider.addEventListener('mouseenter', () => {
 
           slider.style.cursor = 'grab';
         });
-        slider.addEventListener('mouseup', () => {
+      slider.addEventListener('mouseup', () => {
 
           slider.style.cursor = 'grab';
         });
-        window.addEventListener('mouseup', () => {
+      window.addEventListener('mouseup', () => {
 
           pressed = false;
         });
-        slider.addEventListener('mousemove', (e) => {
+      slider.addEventListener('mousemove', (e) => {
           if (!pressed) {  return; }
           e.preventDefault();
           x = e.offsetX;
           innerslider.style.left = `${x - startx}px`;
         });
 
-		      buttonLeft.addEventListener('click', () => {
+		    buttonLeft.addEventListener('click', () => {
 			document.getElementById('slider').scrollLeft -= 180;
 		});
 
-		      buttonRight.addEventListener('click', () => {
+		    buttonRight.addEventListener('click', () => {
 			document.getElementById('slider').scrollLeft += 180;
 		});
 
@@ -100,7 +115,7 @@ export class AlevelComponent implements OnInit {
 
 
         // tslint:disable-next-line:no-unused-expression
-        new Glider(document.querySelector('.gliderAL') as HTMLElement, {
+      new Glider(document.querySelector('.gliderAL') as HTMLElement, {
             slidesToShow: 3,
             draggable: true,
             // dits: '#dots',
@@ -111,11 +126,11 @@ export class AlevelComponent implements OnInit {
             }
         });
 
-        const td = new FormData();
-        td.append('access_key', '6808');
-        td.append('get_categories', '1');
+      const td = new FormData();
+      td.append('access_key', '6808');
+      td.append('get_categories', '1');
 
-        this
+      this
             .Serviceservice
             .testupdate(td)
             .subscribe((event => {
@@ -134,6 +149,8 @@ export class AlevelComponent implements OnInit {
         sub.append('access_key', '6808');
         sub.append('get_subcategory_by_maincategory', '1');
         sub.append('main_id', item.id);
+
+
 
         this
             .Serviceservice

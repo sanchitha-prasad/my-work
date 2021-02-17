@@ -49,13 +49,10 @@ src: url(../../../assets/FM-Rajantha.TTF);
   }
 
 .card1 {
-margin-top: 100px;
- background-color: tomato;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 15vh;
+
   transition: 0.3s;
-  width: 400px;
-  text-align: center;
-  color: white;
+  width: 250px;
 
 }
 .card1:hover {
@@ -252,12 +249,10 @@ color: white;
   }
 
 .card1 {
-margin-top: 100px;
- background-color: tomato;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 12vh;
+
   transition: 0.3s;
-  width: 400px;
-  text-align: center;
+  width: 250px;
   color: white;
 
 }
@@ -372,6 +367,20 @@ color: white;
     top: 88.8%;
     margin-top: 0.6%;
     }
+    .card1 {
+      margin-top: 12vh;
+
+      transition: 0.3s;
+      width: 250px;
+      color: white;
+
+    }
+    .grade{
+      top: 45vh;
+    }
+    .transparent{
+      margin-top: 50vh;
+    }
 }
 @media only screen and (min-width: 1280px) and (max-width:720px){
   .home{
@@ -430,13 +439,10 @@ color: white;
     font-size: 30px;
   }
 .card1 {
-margin-top: 100px;
- background-color: tomato;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 12vh;
+
   transition: 0.3s;
-  width: 400px;
-  text-align: center;
-  color: white;
+  width: 250px;
 
 }
 .card1:hover {
@@ -456,6 +462,7 @@ margin-top: 100px;
 }
 .grade{
   /* top: 360px; */
+  top: 53vh;
   padding: 7.5px;
   background-image: linear-gradient(to right,rgb(255, 174, 0), rgb(255, 40, 2));
   /* border: 1px #fcf8f8 solid; */
@@ -478,7 +485,7 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   font-family: "Lucida Console", Courier, monospace;
 }
 .transparent{
-  margin-top: 390px;
+  margin-top: 57vh;
   background-color: rgba(39, 39, 39, 0.8);
   border-radius: 2%;
   margin-bottom: -100px;
@@ -570,11 +577,15 @@ color: white;
 width: 8%;
     }
   nav{
-    top: 110px;
+    top: 10vh;
     left: 8px;
   }
   .card1{
-    margin-top: 200px;
+    /* margin-top: 200px; */
+    margin-top: 15vh;
+
+    transition: 0.3s;
+    width: 250px;
   }
   .transparent{
     margin-top: 520px;
@@ -586,6 +597,13 @@ width: 8%;
   }
 }
 @media (min-width:3840px){
+  .card1{
+    /* margin-top: 200px; */
+    margin-top: 8vh;
+
+    transition: 0.3s;
+    width: 250px;
+  }
   .body{
     width: 50%;
     height: 50%;
@@ -600,12 +618,17 @@ width: 8%;
     }
   .transparent{
     margin-top: 50vh;
-    justify-content: center
+    justify-content: center;
+    left: -40px;
   }
   .grade{
     top: 48vh;
     left: 15vh;
     width: 500px;
+  }
+  nav{
+    top: 5vh;
+    left: 8px;
   }
 }
 
@@ -632,13 +655,10 @@ width: 8%;
 }
 .card1 {
   margin-top: 10px;
-  background-color: tomato;
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-   transition: 0.3s;
-   width: 300px;
-   text-align: center;
-   color: white;
-   font-size: 10px;
+  /* margin-top: 15vh; */
+
+  transition: 0.3s;
+  width: 250px;
 
 }
 .card1:hover {
@@ -723,14 +743,15 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 figure{
 display: flex ;
-margin: 20px 20px 20px;
+margin: 20px 150px 20px 0px;
+}
 /* padding: .7em; */
 /* left: 200px; */
 
 
 
 
-}
+
 .fig1{
  margin-left: 306%;
   margin-top: 30px;
@@ -757,7 +778,7 @@ width: 50px;
 }
 
 .fig2{
-  margin-left: 450px;
+  /* margin-left: 450px; */
   text-align: center;
 
 

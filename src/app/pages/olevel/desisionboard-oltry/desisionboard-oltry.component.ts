@@ -16,6 +16,7 @@ export class DesisionboardOltryComponent implements OnInit {
   totalCoins = 0;
   totalscore =  0;
   userID: string;
+  present: number;
 
   constructor(  private Serviceservice: ServiceService, private router: Router, private route: ActivatedRoute) { }
 
@@ -39,6 +40,8 @@ export class DesisionboardOltryComponent implements OnInit {
     this.wrong = this.data[0];
     this.correct = this.data[1];
     this.score = this.data[2];
+
+    this.present = this.correct * 10;
 
 
   }

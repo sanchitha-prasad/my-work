@@ -29,7 +29,9 @@ export class GradeSixComponent implements OnInit {
     ) {}
     loadComponents = NavBarComponent;
     ngOnInit(): void {
-        this
+      this.gradeal = '6ශ්‍රේණිය';
+      this.subCategories(1);
+      this
             .route
             .queryParams
             .subscribe((params) => {
@@ -39,10 +41,10 @@ export class GradeSixComponent implements OnInit {
             });
             // console.log(this.data);
 
-        this.userID = sessionStorage.getItem('userId');
-        this.getDataUser();
+      this.userID = sessionStorage.getItem('userId');
+      this.getDataUser();
         // tslint:disable-next-line:no-unused-expression
-        new Glider(document.querySelector('.glider6') as HTMLElement, {
+      new Glider(document.querySelector('.glider6') as HTMLElement, {
             slidesToShow: 4,
             draggable: true,
             arrows: {

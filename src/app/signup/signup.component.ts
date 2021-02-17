@@ -24,14 +24,37 @@ export class SignupComponent implements OnInit {
     }
 
     // tslint:disable-next-line:typedef
-    async signup(name : string, email : string, password : string) {
+    async signup(name : string, email : string, password : string, repassword: string, phone: number) {
 
+      if (!name ){
+        this.tostar.error('Please complete the Name ');
+      }
+      if (!password){
+        this.tostar.error('Please complete the Password');
+      }
+      if (!email ){
+        this.tostar.error('Please complete the Email');
+      }
+      if (!phone ){
+        this.tostar.error('Please complete the Contact Number');
+      }
+
+      if (password !== repassword){
+        this.tostar.error('No match password');
+        document.getElementById('re').style.color = 'red';
+      }
+
+     else{
+      document.getElementById('re').style.color = 'green';
       this.isLoading = true;
 
 
       setTimeout(() => {
-        this.isLoading = false;
-      }, 3000);
+          this.isLoading = false;
+        }, 3000);
+
+
+
 
 
 
@@ -49,7 +72,7 @@ export class SignupComponent implements OnInit {
                 user.append('name', name);
                 user.append('email', email);
                 user.append('profile', '');
-                user.append('mobile', '0');
+                user.append('mobile', String(phone));
                 user.append('type', 'email');
                 user.append('fcm_id', res.user.uid);
                 user.append('refer_code', '0');
@@ -60,7 +83,7 @@ export class SignupComponent implements OnInit {
                     .service
                     .signup(user)
                     .subscribe((event => {}), (err) => {
-                        console.log(err);
+
 
                     });
 
@@ -68,7 +91,7 @@ export class SignupComponent implements OnInit {
                     .service
                     .signupOl(user)
                     .subscribe((event => {}), (err) => {
-                        console.log(err);
+
 
                     });
 
@@ -76,7 +99,7 @@ export class SignupComponent implements OnInit {
                     .service
                     .signupSix(user)
                     .subscribe((event => {}), (err) => {
-                        console.log(err);
+
 
                     });
 
@@ -90,6 +113,7 @@ export class SignupComponent implements OnInit {
                   .error(errorMessage);
 
           });
+        }
     }
 login(): void {
       this

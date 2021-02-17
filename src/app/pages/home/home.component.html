@@ -22,13 +22,13 @@
 
               <li class="item float-right " ><a  style="text-decoration: none;color: red;font-size: 20px;" ><img class="rounded-circle z-depth-2 " style="margin-top: 0px;" alt="" src="rounded-crircle" [src]="urllink" data-holder-rendered="true" width="50px"  height="50px"></a></li>
               <li class="item button secondary "><a style="text-decoration: none;color: white;cursor: pointer;" (click)="profile()">{{user}}</a> </li>
-              <li class="item button  notification float-right"><a style="text-decoration: none;color: white;cursor: pointer;" (click)="toggleNotifi()"><i class="fa fa-bell" ></i><span class="badge">{{notify}}</span>  </a>
+              <li class="item button  notification float-right"><a style="text-decoration: none;color: white;cursor: pointer;" (click)="toggleNotifi()"><i class="fa fa-bell" ></i><span class="badge" id="badge">{{notify}}</span>  </a>
                 <div class="notifi-box overflow-auto" id="box" style="z-index: 80;">
                   <h2>Notifications <span>{{notify}}</span></h2>
                   <div class="notifi-item "  *ngFor="let n of notifi">
                     <div class="text col-md-6">
                        <h4 style="color: blue;">{{n.title}}</h4>
-                       <p style="color: rgb(0, 255, 0);"> <b>{{n.message}}</b></p>
+                       <p style="color: rgb(3, 3, 3);"> <b>{{n.message}}</b></p>
                       </div>
                   </div>
                   </div>

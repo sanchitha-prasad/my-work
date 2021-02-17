@@ -40,6 +40,23 @@ export class OlevelComponent implements OnInit {
 
 
     });
+    const item = '13';
+    const sub = new FormData();
+    sub.append('access_key', '6808');
+    sub.append('get_subcategory_by_maincategory', '1');
+    sub.append('main_id', item);
+
+    this.Serviceservice.getcategoryOl(sub).subscribe((event => {
+     this.subcat = event;
+     this.subcategory = this.subcat.data;
+
+     this.sub = '2018';
+
+
+    }), (err) => {
+      console.log(err);
+
+    });
     this.userID = sessionStorage.getItem('userId');
     this.getDataUser();
     // tslint:disable-next-line:no-unused-expression
@@ -98,6 +115,7 @@ mainCategories(item): void{
      this.subcategory = this.subcat.data;
 
      this.sub = item.category_name;
+
 
 
     }), (err) => {

@@ -25,14 +25,24 @@
               <i class="fa fa-user"></i>
               <input type="text" #name placeholder="Name" />
             </div> <div class="input-field">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-envelope"></i>
                 <input type="text" #email placeholder="Email" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-phone"></i>
+                <input type="text"#phone placeholder="Phone Number" />
               </div>
             <div class="input-field">
               <i class="fa fa-lock"></i>
               <input type="password"#password placeholder="Password" />
             </div>
-            <button type="button" id="btn"   style="margin-left: 120px;" (click)="signup(name.value, email.value, password.value)"  class="btn solid " >  <img *ngIf="isLoading" style="width : 30px" src="../../assets/loading.gif" />SignUp </button>
+            <div class="input-field">
+              <i class="fa fa-lock"></i>
+              <input type="password"#repassword placeholder="Confirm Password" id="re" />
+
+            </div>
+
+            <button type="button" id="btn"   style="margin-left: 120px;" (click)="signup(name.value, email.value, password.value, repassword.value, phone.value)"  class="btn solid " >  <img *ngIf="isLoading" style="width : 30px" src="../../assets/loading.gif" />SignUp </button>
             <div  style="margin-left: 150px;text-decoration: none;" >
            <a (click)="login()"  style="text-decoration: none;color: red;font-size: 20px;cursor: pointer;"><i class="fa fa-arrow-left" aria-hidden="true"></i>
             Go Back</a>
